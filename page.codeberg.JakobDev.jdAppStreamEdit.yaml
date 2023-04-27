@@ -55,8 +55,8 @@ modules:
       - NO_INSTALL_HARDLINKS=1
     sources:
       - type: archive
-        url: https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.40.0.tar.xz
-        sha256: b17a598fbf58729ef13b577465eb93b2d484df1201518b708b5044ff623bf46d
+        url: https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.40.1.tar.xz
+        sha256: 4893b8b98eefc9fdc4b0e7ca249e340004faa7804a433d17429e311e1fef21d2
         x-checker-data:
           type: anitya
           project-id: 5350
@@ -88,8 +88,8 @@ modules:
       - -Dgir=false
     sources:
       - type: archive
-        url: https://github.com/ximion/appstream/archive/refs/tags/v0.16.1.tar.gz
-        sha256: 266c75a302064ad7e50905a365fa64537268c318cb1cf19dd003911a781d6797
+        url: https://github.com/ximion/appstream/archive/refs/tags/v0.16.2.tar.gz
+        sha256: 9a2ebe660704878ab795470a72cd53049408ddd9da6e9cb45232cf0ed6505660
         x-checker-data:
           type: anitya
           project-id: 10385
