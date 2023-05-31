@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
   <!--Created with jdAppStreamEdit 6.0-->
   <id>page.codeberg.JakobDev.jdAppStreamEdit</id>
@@ -70,6 +70,7 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="7.0" date="2023-05-31"/>
     <release version="6.0" date="2023-03-13" type="stable">
       <url>https://codeberg.org/JakobDev/jdAppStreamEdit/releases/tag/6.0</url>
       <description>
