@@ -70,6 +70,7 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="7.1" date="2023-09-14"/>
     <release version="7.0" date="2023-05-31"/>
     <release version="6.0" date="2023-03-13" type="stable">
       <url>https://codeberg.org/JakobDev/jdAppStreamEdit/releases/tag/6.0</url>
