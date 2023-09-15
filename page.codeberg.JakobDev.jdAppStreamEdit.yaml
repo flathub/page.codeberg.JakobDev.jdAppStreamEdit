@@ -100,15 +100,12 @@ modules:
     build-commands:
       - pip install --no-deps --no-build-isolation --prefix=$FLATPAK_DEST .
       - python ./install-unix-datafiles.py --prefix=$FLATPAK_DEST
-      - install page.codeberg.JakobDev.jdAppStreamEdit.metainfo.xml -t /app/share/metainfo
     sources:
       - type: archive
-        url: https://codeberg.org/JakobDev/jdAppStreamEdit/archive/7.0.tar.gz
-        sha256: 8aaff6a698225b201f80767a5d8d06c59d759f503865228c4d53d1272161894b
+        url: https://codeberg.org/JakobDev/jdAppStreamEdit/archive/7.1.tar.gz
+        sha256: c2b796df12d7467f7250fb09eecd8ea6a30044de51bce4c263bbf9a5de87eec7
         x-checker-data:
           type: json
           url: https://codeberg.org/api/v1/repos/JakobDev/jdAppStreamEdit/releases/latest
           version-query: .tag_name
           url-query: .tarball_url
-      - type: file
-        path: page.codeberg.JakobDev.jdAppStreamEdit.metainfo.xml
