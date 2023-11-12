@@ -88,8 +88,8 @@ modules:
       - -Dgir=false
     sources:
       - type: archive
-        url: https://github.com/ximion/appstream/archive/refs/tags/v0.16.4.tar.gz
-        sha256: 95d5cf451d1945182a9bc4d597c13e713451a3dba1a5759f45b6b3279ff3774c
+        url: https://github.com/ximion/appstream/archive/refs/tags/v1.0.0.tar.gz
+        sha256: e964fea8b4b7efac7976dc13da856421ddec4299acb5012a7c059f03eabcbeae
         x-checker-data:
           type: anitya
           project-id: 10385
