@@ -102,8 +102,8 @@ modules:
       - python ./install-unix-datafiles.py --prefix=$FLATPAK_DEST
     sources:
       - type: archive
-        url: https://codeberg.org/JakobDev/jdAppStreamEdit/archive/7.1.tar.gz
-        sha256: c2b796df12d7467f7250fb09eecd8ea6a30044de51bce4c263bbf9a5de87eec7
+        url: https://codeberg.org/JakobDev/jdAppStreamEdit/archive/8.0.tar.gz
+        sha256: cee90dd96b8ebb72701e13f26020154c7b95d06a9e429c5ded1b9f57c3fd8e34
         x-checker-data:
           type: json
           url: https://codeberg.org/api/v1/repos/JakobDev/jdAppStreamEdit/releases/latest
