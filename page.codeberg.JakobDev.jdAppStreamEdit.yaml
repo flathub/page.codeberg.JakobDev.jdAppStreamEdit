@@ -42,8 +42,8 @@ modules:
       - -Dgtkdoc=false
     sources:
       - type: archive
-        url: https://github.com/hughsie/libxmlb/archive/refs/tags/0.3.15.tar.gz
-        sha256: 68ee69002cc2b792fca250d7a7df2a8e3f8e43ccd6ab7b14c8481407b95e7087
+        url: https://github.com/hughsie/libxmlb/archive/refs/tags/0.3.16.tar.gz
+        sha256: 837b49693e889ca88b192eb46d10d2600a2fbd98d67980bef24151a986794d6a
         x-checker-data:
           type: anitya
           project-id: 179028
