@@ -19,6 +19,12 @@ finish-args:
   - --device=dri
   # For preview in Gnome Software
   - --talk-name=org.freedesktop.Flatpak
+cleanup:
+  - /share/installed-tests
+  - /share/gettext
+  - /share/gir-1.0
+  - /share/man
+  - /plugins
 
 modules:
   - python3-modules.yaml
@@ -48,6 +54,9 @@ modules:
           type: anitya
           project-id: 179028
           url-template: https://github.com/hughsie/libxmlb/archive/refs/tags/$version.tar.gz
+    cleanup:
+       - /libexec
+       - /bin
 
   - name: git
     buildsystem: autotools
@@ -62,6 +71,8 @@ modules:
           project-id: 5350
           url-template: https://mirrors.edge.kernel.org/pub/software/scm/git/git-$version.tar.xz
     cleanup:
+      - /bin/scalar
+      - /bin/git?*
       - /share
 
   - name: appstream-glib
@@ -69,7 +80,9 @@ modules:
     config-opts:
       - -Dstemmer=false
       - -Dgtk-doc=false
+      - -Dbuilder=false
       - -Drpm=false
+      - -Dman=false
     sources:
       - type: archive
         url: https://github.com/hughsie/appstream-glib/archive/refs/tags/appstream_glib_0_8_2.tar.gz
@@ -78,6 +91,9 @@ modules:
           type: anitya
           project-id: 14018
           url-template: https://github.com/hughsie/appstream-glib/archive/refs/tags/appstream_glib_$version.tar.gz
+    cleanup:
+      - /share/bash-completion
+      - /share/aclocal
 
   - name: appstream
     buildsystem: meson
@@ -94,6 +110,8 @@ modules:
           type: anitya
           project-id: 10385
           url-template: https://github.com/ximion/appstream/archive/refs/tags/v$version.tar.gz
+    cleanup:
+      - /share/metainfo
 
   - name: jdAppStreamEdit
     buildsystem: simple
