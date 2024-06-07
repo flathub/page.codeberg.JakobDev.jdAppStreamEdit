@@ -78,7 +78,6 @@ modules:
   - name: appstream-glib
     buildsystem: meson
     config-opts:
-      - -Dstemmer=false
       - -Dgtk-doc=false
       - -Dbuilder=false
       - -Drpm=false
