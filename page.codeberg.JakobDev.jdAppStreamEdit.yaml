@@ -48,8 +48,8 @@ modules:
       - -Dgtkdoc=false
     sources:
       - type: archive
-        url: https://github.com/hughsie/libxmlb/archive/refs/tags/0.3.19.tar.gz
-        sha256: 7050a3e43c4e1f53020cfbdfcb6fd5dc664c6c240faceb5ae3c8830423918262
+        url: https://github.com/hughsie/libxmlb/archive/refs/tags/0.3.21.tar.gz
+        sha256: 5df332c577dc81a5621f0908ed3a087855045a4f4b4170b194fcf1f0f403a97d
         x-checker-data:
           type: anitya
           project-id: 179028
@@ -119,8 +119,8 @@ modules:
       - python ./install-unix-datafiles.py --prefix=$FLATPAK_DEST
     sources:
       - type: archive
-        url: https://codeberg.org/JakobDev/jdAppStreamEdit/archive/9.1.tar.gz
-        sha256: 6770a2819a2eff37a6d22fa1eda0ff81188aeda0d793eee4b8a471db59ee01bf
+        url: https://codeberg.org/JakobDev/jdAppStreamEdit/archive/9.2.tar.gz
+        sha256: bba33bb35420d59369bb76c406afcafab48cb7a2909fba239c937aa64ad99730
         x-checker-data:
           type: json
           url: https://codeberg.org/api/v1/repos/JakobDev/jdAppStreamEdit/releases/latest
