@@ -24,6 +24,8 @@ cleanup:
   - /share/gettext
   - /share/gir-1.0
   - /share/man
+  - /lib/*.la
+  - /lib/*.a
   - /plugins
 
 modules:
@@ -39,6 +41,19 @@ modules:
           type: anitya
           project-id: 13522
           url-template: https://github.com/yaml/libyaml/archive/refs/tags/$version.tar.gz
+
+  - name: libfyaml
+    buildsystem: autotools
+    sources:
+      - type: archive
+        url: https://github.com/pantoniou/libfyaml/releases/download/v0.9/libfyaml-0.9.tar.gz
+        sha256: 7731edc5dfcc345d5c5c9f6ce597133991a689dabede393cd77bae89b327cd6d
+        x-checker-data:
+          type: anitya
+          project-id: 383614
+          url-template: https://github.com/pantoniou/libfyaml/releases/download/v$version/libfyaml-$version.tar.gz
+    cleanup:
+      - /bin
 
   - name: libxmlb
     buildsystem: meson
