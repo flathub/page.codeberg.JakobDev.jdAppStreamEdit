@@ -46,8 +46,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://github.com/pantoniou/libfyaml/releases/download/v0.9.2/libfyaml-0.9.2.tar.gz
-        sha256: d76da1dcc91f5d74cb9812ecce141477be93a258001e05a268a86715c0eea098
+        url: https://github.com/pantoniou/libfyaml/releases/download/v0.9.3/libfyaml-0.9.3.tar.gz
+        sha256: d4541c36ae726f51e9df22dd8ac1a19d122666060daf3806e37b848d4c73a8ed
         x-checker-data:
           type: anitya
           project-id: 383614
@@ -118,8 +118,8 @@ modules:
       - -Dgir=false
     sources:
       - type: archive
-        url: https://github.com/ximion/appstream/archive/refs/tags/v1.1.1.tar.gz
-        sha256: 1615468b8d1e5edb9a9081f81841c8a22439c64bee5f02b008b3b8d5a5204c91
+        url: https://github.com/ximion/appstream/archive/refs/tags/v1.1.2.tar.gz
+        sha256: 564ec87b16e9e4ee81fb021e612250fd27f3a3ecd31c209a5dd1ff59def3022d
         x-checker-data:
           type: anitya
           project-id: 10385
