@@ -112,6 +112,7 @@ modules:
   - name: appstream
     buildsystem: meson
     config-opts:
+      - -Dbash-completion=false
       - -Dstemming=false
       - -Dapidocs=false
       - -Dcompose=true
