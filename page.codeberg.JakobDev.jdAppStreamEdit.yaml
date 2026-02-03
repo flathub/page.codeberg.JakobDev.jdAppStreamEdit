@@ -74,9 +74,7 @@ modules:
       - /bin
 
   - name: git
-    buildsystem: autotools
-    make-install-args:
-      - NO_INSTALL_HARDLINKS=1
+    buildsystem: meson
     sources:
       - type: archive
         url: https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.53.0.tar.xz
