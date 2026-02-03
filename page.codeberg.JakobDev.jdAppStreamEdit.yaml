@@ -43,7 +43,7 @@ modules:
           url-template: https://github.com/yaml/libyaml/archive/refs/tags/$version.tar.gz
 
   - name: libfyaml
-    buildsystem: autotools
+    buildsystem: cmake-ninja
     sources:
       - type: archive
         url: https://github.com/pantoniou/libfyaml/releases/download/v0.9.3/libfyaml-0.9.3.tar.gz
