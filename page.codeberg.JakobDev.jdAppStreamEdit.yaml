@@ -31,17 +31,6 @@ cleanup:
 modules:
   - python3-modules.yaml
 
-  - name: libyaml
-    buildsystem: autotools
-    sources:
-      - type: archive
-        url: https://github.com/yaml/libyaml/archive/refs/tags/0.2.5.tar.gz
-        sha256: fa240dbf262be053f3898006d502d514936c818e422afdcf33921c63bed9bf2e
-        x-checker-data:
-          type: anitya
-          project-id: 13522
-          url-template: https://github.com/yaml/libyaml/archive/refs/tags/$version.tar.gz
-
   - name: libfyaml
     buildsystem: cmake-ninja
     sources:
@@ -53,24 +42,6 @@ modules:
           project-id: 383614
           url-template: https://github.com/pantoniou/libfyaml/releases/download/v$version/libfyaml-$version.tar.gz
     cleanup:
-      - /bin
-
-  - name: libxmlb
-    buildsystem: meson
-    config-opts:
-      - -Dintrospection=false
-      - -Dstemmer=false
-      - -Dgtkdoc=false
-    sources:
-      - type: archive
-        url: https://github.com/hughsie/libxmlb/archive/refs/tags/0.3.24.tar.gz
-        sha256: 45245a5ebe8a3598449f4d53a576801bdb6489aae03ff2206ad4fc7799611014
-        x-checker-data:
-          type: anitya
-          project-id: 179028
-          url-template: https://github.com/hughsie/libxmlb/archive/refs/tags/$version.tar.gz
-    cleanup:
-      - /libexec
       - /bin
 
   - name: git
