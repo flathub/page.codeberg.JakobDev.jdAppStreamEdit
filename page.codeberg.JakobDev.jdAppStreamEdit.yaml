@@ -33,6 +33,8 @@ modules:
 
   - name: libfyaml
     buildsystem: cmake-ninja
+    config-opts:
+      - -DBUILD_TESTING=OFF
     sources:
       - type: archive
         url: https://github.com/pantoniou/libfyaml/releases/download/v0.9.4/libfyaml-0.9.4.tar.gz
