@@ -20,6 +20,8 @@ finish-args:
   # For preview in Gnome Software
   - --talk-name=org.freedesktop.Flatpak
 cleanup:
+  - /share/aclocal
+  - /share/bash-completion
   - /share/installed-tests
   - /share/gettext
   - /share/gir-1.0
@@ -35,6 +37,8 @@ modules:
     buildsystem: cmake-ninja
     config-opts:
       - -DBUILD_TESTING=OFF
+    cleanup:
+      - /bin
     sources:
       - type: archive
         url: https://github.com/pantoniou/libfyaml/releases/download/v0.9.6/libfyaml-0.9.6.tar.gz
@@ -43,18 +47,9 @@ modules:
           type: anitya
           project-id: 383614
           url-template: https://github.com/pantoniou/libfyaml/releases/download/v$version/libfyaml-$version.tar.gz
-    cleanup:
-      - /bin
 
   - name: git
-    make-args:
-      - INSTALL_SYMLINKS=1
-      - NO_PERL=YesPlease
-      - NO_TCLTK=YesPlease
-    make-install-args:
-      - INSTALL_SYMLINKS=1
-      - NO_PERL=YesPlease
-      - NO_TCLTK=YesPlease
+    buildsystem: meson
     cleanup:
       - /bin/scalar
       - /bin/git?*
@@ -84,9 +79,6 @@ modules:
           type: anitya
           project-id: 14018
           url-template: https://github.com/hughsie/appstream-glib/archive/refs/tags/appstream_glib_$version.tar.gz
-    cleanup:
-      - /share/bash-completion
-      - /share/aclocal
 
   - name: appstream
     buildsystem: meson
@@ -96,6 +88,8 @@ modules:
       - -Dapidocs=false
       - -Dcompose=true
       - -Dgir=false
+    cleanup:
+      - /share/metainfo
     sources:
       - type: archive
         url: https://github.com/ximion/appstream/archive/refs/tags/v1.1.2.tar.gz
@@ -104,8 +98,6 @@ modules:
           type: anitya
           project-id: 10385
           url-template: https://github.com/ximion/appstream/archive/refs/tags/v$version.tar.gz
-    cleanup:
-      - /share/metainfo
 
   - name: jdAppStreamEdit
     buildsystem: simple
