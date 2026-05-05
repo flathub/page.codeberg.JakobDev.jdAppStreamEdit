@@ -47,7 +47,18 @@ modules:
       - /bin
 
   - name: git
-    buildsystem: meson
+    make-args:
+      - INSTALL_SYMLINKS=1
+      - NO_PERL=YesPlease
+      - NO_TCLTK=YesPlease
+    make-install-args:
+      - INSTALL_SYMLINKS=1
+      - NO_PERL=YesPlease
+      - NO_TCLTK=YesPlease
+    cleanup:
+      - /bin/scalar
+      - /bin/git?*
+      - /share/git-core
     sources:
       - type: archive
         url: https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.54.0.tar.xz
@@ -55,11 +66,8 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 5350
+          stable-only: true
           url-template: https://mirrors.edge.kernel.org/pub/software/scm/git/git-$version.tar.xz
-    cleanup:
-      - /bin/scalar
-      - /bin/git?*
-      - /share
 
   - name: appstream-glib
     buildsystem: meson
