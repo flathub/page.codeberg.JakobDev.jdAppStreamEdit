@@ -2,12 +2,15 @@ id: page.codeberg.JakobDev.jdAppStreamEdit
 runtime: org.kde.Platform
 runtime-version: '6.10'
 sdk: org.kde.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
 base: com.riverbankcomputing.PyQt.BaseApp
 base-version: '6.10'
 command: jdappstreamedit
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
 build-options:
+  append-path: /usr/lib/sdk/rust-stable/bin
   env:
     - BASEAPP_REMOVE_PYWEBENGINE=1
 finish-args:
@@ -50,8 +53,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.54.0.tar.xz
-        sha256: f689162364c10de79ef89aa8dbf48731eb057e34edbbd20aca510ce0154681a3
+        url: https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.55.0.tar.xz
+        sha256: 457fdb04dc8728e007d4688695e6912e6f680727920f2a40bf11eacc17505357
         x-checker-data:
           type: anitya
           project-id: 5350
@@ -84,14 +87,16 @@ modules:
     buildsystem: meson
     config-opts:
       - -Dbash-completion=false
+      - -Dblake3-support=false
       - -Dstemming=false
       - -Dapidocs=false
       - -Dcompose=true
       - -Dgir=false
+      - -Dman=false
     sources:
       - type: archive
-        url: https://github.com/ximion/appstream/archive/refs/tags/v1.1.2.tar.gz
-        sha256: 564ec87b16e9e4ee81fb021e612250fd27f3a3ecd31c209a5dd1ff59def3022d
+        url: https://github.com/ximion/appstream/archive/refs/tags/v1.1.3.tar.gz
+        sha256: 437c0564facc63f36b7b7907293182446a9c535619a09ec93840147f685c2f64
         x-checker-data:
           type: anitya
           project-id: 10385
