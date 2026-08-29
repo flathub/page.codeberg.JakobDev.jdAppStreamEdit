@@ -83,6 +83,17 @@ modules:
       - /share/bash-completion
       - /share/aclocal
 
+  - name: libvips
+    buildsystem: meson
+    sources:
+      - type: archive
+        url: https://github.com/libvips/libvips/releases/download/v8.18.6/vips-8.18.6.tar.xz
+        sha256: 3c41e1d5458081bfa4a5bc54e116c46259c75c6760a18027764555632b9dda3e
+        x-checker-data:
+          type: anitya
+          project-id: 5097
+          url-template: https://github.com/libvips/libvips/releases/download/v$version/vips-$version.tar.xz
+
   - name: appstream
     buildsystem: meson
     config-opts:
@@ -112,7 +123,7 @@ modules:
     sources:
       - type: archive
         url: https://codeberg.org/JakobDev/jdAppStreamEdit/archive/9.2.tar.gz
-        sha256: bba33bb35420d59369bb76c406afcafab48cb7a2909fba239c937aa64ad99730
+        sha256: d29582d6fd4ca2675d222d1baad32d9682ff77114bc0454c05ee7058045ea568
         x-checker-data:
           type: json
           url: https://codeberg.org/api/v1/repos/JakobDev/jdAppStreamEdit/releases/latest
