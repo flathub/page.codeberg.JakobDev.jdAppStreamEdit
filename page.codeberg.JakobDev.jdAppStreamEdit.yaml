@@ -15,13 +15,12 @@ build-options:
     - BASEAPP_REMOVE_PYWEBENGINE=1
 finish-args:
   - --socket=fallback-x11
+  - --filesystem=/tmp:rw
   - --socket=wayland
   - --share=network
   - --device=dri
   - --share=ipc
   - --device=dri
-  # For preview in Gnome Software
-  - --talk-name=org.freedesktop.Flatpak
 cleanup:
   - /share/installed-tests
   - /share/gettext
@@ -122,8 +121,8 @@ modules:
       - python ./install-unix-datafiles.py --prefix=$FLATPAK_DEST
     sources:
       - type: archive
-        url: https://codeberg.org/JakobDev/jdAppStreamEdit/archive/9.2.tar.gz
-        sha256: d29582d6fd4ca2675d222d1baad32d9682ff77114bc0454c05ee7058045ea568
+        url: https://codeberg.org/JakobDev/jdAppStreamEdit/archive/10.0.tar.gz
+        sha256: 26654cb2bcc45d3b57d9f22bbf5158c98e684b4dcd7dfc124d5bd037bf070696
         x-checker-data:
           type: json
           url: https://codeberg.org/api/v1/repos/JakobDev/jdAppStreamEdit/releases/latest
