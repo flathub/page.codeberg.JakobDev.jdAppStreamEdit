@@ -39,12 +39,14 @@ modules:
       - -DBUILD_TESTING=OFF
     sources:
       - type: archive
-        url: https://github.com/pantoniou/libfyaml/releases/download/v0.9.6/libfyaml-0.9.6.tar.gz
+        url: 
+          https://github.com/pantoniou/libfyaml/releases/download/v0.9.6/libfyaml-0.9.6.tar.gz
         sha256: a59cc3331e2eb903ec36933ad52a45888041cac31e44f553a00511131242c483
         x-checker-data:
           type: anitya
           project-id: 383614
-          url-template: https://github.com/pantoniou/libfyaml/releases/download/v$version/libfyaml-$version.tar.gz
+          url-template: 
+            https://github.com/pantoniou/libfyaml/releases/download/v$version/libfyaml-$version.tar.gz
     cleanup:
       - /bin
 
@@ -72,12 +74,14 @@ modules:
       - -Dman=false
     sources:
       - type: archive
-        url: https://github.com/hughsie/appstream-glib/archive/refs/tags/appstream_glib_0_8_3.tar.gz
+        url: 
+          https://github.com/hughsie/appstream-glib/archive/refs/tags/appstream_glib_0_8_3.tar.gz
         sha256: 15ad7690b0132d883bd066699a7b55f6cef4c0f266d18d781ce5d8112fb4ee63
         x-checker-data:
           type: anitya
           project-id: 14018
-          url-template: https://github.com/hughsie/appstream-glib/archive/refs/tags/appstream_glib_$version.tar.gz
+          url-template: 
+            https://github.com/hughsie/appstream-glib/archive/refs/tags/appstream_glib_$version.tar.gz
     cleanup:
       - /share/bash-completion
       - /share/aclocal
@@ -91,7 +95,8 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 5097
-          url-template: https://github.com/libvips/libvips/releases/download/v$version/vips-$version.tar.xz
+          url-template: 
+            https://github.com/libvips/libvips/releases/download/v$version/vips-$version.tar.xz
 
   - name: appstream
     buildsystem: meson
@@ -105,8 +110,8 @@ modules:
       - -Dman=false
     sources:
       - type: archive
-        url: https://github.com/ximion/appstream/archive/refs/tags/v1.2.1.tar.gz
-        sha256: 2bc53d1d63ae28e7409a15747d4ae23a557409249461aab87a7947640402d1bd
+        url: https://github.com/ximion/appstream/archive/refs/tags/v1.2.2.tar.gz
+        sha256: 6b554b90c2139aceef65e1aebe811cfe398af4ea749eb5ffa0b7286053ff9e50
         x-checker-data:
           type: anitya
           project-id: 10385
