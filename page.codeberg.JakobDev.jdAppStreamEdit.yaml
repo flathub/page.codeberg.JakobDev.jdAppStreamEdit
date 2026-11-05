@@ -81,7 +81,7 @@ modules:
           type: anitya
           project-id: 14018
           url-template: 
-            https://github.com/hughsie/appstream-glib/archive/refs/tags/appstream_glib_$version.tar.gz
+            https://github.com/hughsie/appstream-glib/archive/refs/tags/appstream_glib_${major}_${minor}_${patch}.tar.gz
     cleanup:
       - /share/bash-completion
       - /share/aclocal
